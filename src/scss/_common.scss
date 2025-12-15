@@ -1,0 +1,137 @@
+@use "var" as *;
+/* common */
+
+:root {
+  --color-light: #FFFFFF;
+  --color-dark: #2B2B2B;
+  --color-orange: #E89F38;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+*:focus-visible {
+  outline: 1px dashed var(--color-light);
+}
+
+input:focus-visible + label {
+  outline: 1px dashed var(--color-dark);
+}
+
+* {
+
+  &::selection {
+    color: var(--color-text, var(--color-dark));
+    background-color: var(--color-background, var(--color-light));
+  }
+
+  @media(max-width: $mobile-width) {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  flex-direction: column;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+  font-weight: 400;
+  background-color: var(--color-light);
+  color: var(--color-dark);
+  overflow-x: hidden;
+
+  &::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+
+    @media(max-width: $mobile-width) {
+      width: 3px;
+    }
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: var(--color-light);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--color-dark);
+    border-radius: 3px;
+  }
+}
+
+header {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: auto;
+  z-index: 5;
+}
+
+main {
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: auto;
+}
+
+footer {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+svg {
+  display: block;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.stop-scroll {
+  overflow-y: hidden;
+}
+
+.wrapper {
+  max-width: 1360px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 24px;
+
+  @media(max-width: $mobile-width) {
+    padding: 0 16px;
+  }
+}
+
+/* end common */
