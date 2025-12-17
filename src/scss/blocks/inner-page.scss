@@ -1,3 +1,22 @@
 /* inner-page */
 
+.inner-page__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  &--sidebar {
+    grid-template-columns: 230px 1fr;
+    grid-template-areas: "sidebar main";
+  }
+}
+
+.inner-page__main {
+  grid-area: main;
+}
+
+.inner-page__filter {
+  grid-area: sidebar;
+}
+
+
 /* end inner-page */

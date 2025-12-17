@@ -4,8 +4,13 @@
 :root {
   --color-light: #FFFFFF;
   --color-dark: #2B2B2B;
+  --color-brand: #C7A27B;
   --color-orange: #E89F38;
-  --font-size: 16px;
+  --color-grey: #D8D8D8;
+  --font-size-xl: 20px;
+  --font-size-lg: 16px;
+  --font-size-md: 14px;
+  --font-size-sm: 12px;
 }
 
 *,
@@ -46,7 +51,7 @@ body {
   padding: 0;
   flex-direction: column;
   font-family: 'Inter', sans-serif;
-  font-weight: var(--font-size);
+  font-weight: var(--font-size-lg);
   line-height: 1;
   color: var(--color-dark);
   background-color: var(--color-light);
@@ -75,6 +80,8 @@ header {
   flex-grow: 0;
   flex-shrink: 0;
   flex-basis: auto;
+  position: sticky;
+  top: 0;
   z-index: 5;
 }
 

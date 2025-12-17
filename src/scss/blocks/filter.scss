@@ -1,0 +1,45 @@
+/* filter */
+
+.filter {
+  font-size: var(--font-size-md);
+
+  > a {
+    display: inline-block;
+    padding: 2px 0;
+    margin-bottom: 24px;
+    color: var(--color-dark);
+    text-decoration: none;
+    transition: color 0.2s ease-out;
+
+    &:hover {
+      color: var(--color-brand);
+    }
+  }
+
+  form {
+    padding: 0;
+    padding: 0;
+  }
+
+  fieldset {
+    display: flex;
+    margin-bottom: 32px;
+    padding: 0;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border: none;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  legend {
+    display: inline-block;
+    margin-bottom: 16px;
+    font-weight: 700;
+  }
+}
+
+/* end filter */

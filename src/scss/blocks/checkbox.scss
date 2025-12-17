@@ -1,0 +1,142 @@
+/* checkbox */
+
+.checkbox {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 4px;
+  padding: 6px 0;
+  color: var(--color-dark);
+  transition: color 0.2s ease-out;
+  position: relative;
+  cursor: pointer;
+
+  &:hover {
+    color: var(--color-brand);
+  }
+
+  input {
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+}
+
+.checkbox__icon {
+  display: flex;
+  height: 16px;
+  width: 16px;
+  margin-right: 6px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--color-dark);
+  border-radius: 2px;
+  background-color: var(--color-light);
+  transition: background-color 0.2s ease-out;
+
+  svg {
+    height: auto;
+    width: 10px;
+    fill: none;
+    stroke-width: 2px;
+    stroke: var(--color-light);
+    opacity: 0;
+    transform: scale(0.5);
+    transition: all 0.2s ease-out;
+  }
+}
+
+.checkbox__value {
+  color: var(--color-grey);
+}
+
+.checkbox input:checked {
+
+  + .checkbox__icon {
+    background-color: var(--color-dark);
+
+    svg {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}
+
+.checkbox--round {
+
+  input:checked + .checkbox__icon {
+    background-color: var(--color-light);
+    border-color: var(--color-grey);
+
+    &::before {
+
+      opacity: 1;
+    }
+
+    img,
+    .checkbox__back {
+      border-color: transparent;
+    }
+  }
+
+  .checkbox__icon {
+    height: 22px;
+    width: 22px;
+    border: 1px solid var(--color-light);
+    transition: all 0.2s ease-out;
+    border-radius: 50%;
+    position: relative;
+
+    svg {
+      stroke: var(--color-dark);
+      stroke-width: 1.5px;
+    }
+  }
+
+  .checkbox__icon::after {
+    content: "";
+    height: 18px;
+    width: 18px;
+    margin: auto;
+    border: 1px solid var(--color-grey);
+    border-radius: 50%;
+    position: absolute;
+    inset: 0;
+  }
+
+  .checkbox__icon::before {
+    content: "";
+    height: 18px;
+    width: 18px;
+    margin: auto;
+    background-image: url("../img/icons/radio-back.svg");
+    background-repeat: repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.2s ease-out;
+    position: absolute;
+    inset: 0;
+  }
+
+  img,
+  .checkbox__back {
+    display: block;
+    height: 20px;
+    width: 20px;
+    margin: auto;
+    border: 2px solid var(--color-light);
+    transition: border-color 0.2s ease-out;
+    border-radius: 50%;
+    position: absolute;
+    inset: 0;
+  }
+}
+
+/* end checkbox */

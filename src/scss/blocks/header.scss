@@ -2,11 +2,8 @@
 /* header */
 
 .header {
-  width: 100%;
   padding: 20px 0;
   background-color: var(--color-light);
-  position: fixed;
-  top: 0;
 }
 
 .header__wrapper {
@@ -23,6 +20,10 @@
   a {
     display: block;
     text-decoration: none;
+  }
+
+  a:hover {
+    color: var(--color-brand);
   }
 
   img {
@@ -49,11 +50,34 @@
     align-items: center;
     column-gap: 10px;
     flex-wrap: nowrap;
-    font-size: 20px;
+    font-size: var(--font-size--xl);
     line-height: 1;
     color: var(--color-dark);
     text-decoration: none;
     text-transform: uppercase;
+    transition: color 0.2s ease-out;
+  }
+
+  a:hover {
+    color: var(--color-brand);
+  }
+
+  span {
+    display: inline-block;
+    position: relative;
+  }
+
+  span::after {
+    content: "";
+    height: 1px;
+    width: 100%;
+    background-color: var(--color-dark);
+    transform: scale(0);
+    transition: transform 0.2s ease-out;
+    transform-origin: left;
+    position: absolute;
+    left: 0;
+    bottom: -4px;
   }
 
   img {
@@ -80,6 +104,13 @@
     justify-content: center;
     align-items: center;
     text-decoration: none;
+
+    &:hover {
+
+      svg {
+        stroke: var(--color-brand);
+      }
+    }
   }
 
   button {
@@ -91,6 +122,13 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+
+    &:hover {
+
+      svg {
+        stroke: var(--color-brand);
+      }
+    }
   }
 
   svg {
@@ -98,6 +136,7 @@
     width: 22px;
     fill: var(--color-light);
     stroke: var(--color-dark);
+    transition: stroke 0.2s ease-out;
   }
 }
 
