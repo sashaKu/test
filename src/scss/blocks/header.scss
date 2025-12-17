@@ -1,4 +1,104 @@
+@use "index" as *;
 /* header */
 
+.header {
+  width: 100%;
+  padding: 20px 0;
+  background-color: var(--color-light);
+  position: fixed;
+  top: 0;
+}
+
+.header__wrapper {
+  display: grid;
+  grid-template-columns: 230px 1fr auto;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.header__logo {
+  display: flex;
+
+  a {
+    display: block;
+    text-decoration: none;
+  }
+
+  img {
+    height: auto;
+    width: 110px;
+  }
+}
+
+.header__nav {
+  @include reset-list;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  column-gap: 16px;
+
+  a {
+    display: inline-flex;
+    padding: 4px;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 10px;
+    flex-wrap: nowrap;
+    font-size: 20px;
+    line-height: 1;
+    color: var(--color-dark);
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  img {
+    height: 16px;
+    width: 16px;
+    object-fit: contain;
+  }
+}
+
+.header__list {
+  @include reset-list;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 16px;
+
+  a {
+    display: flex;
+    height: 32px;
+    width: 32px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+  }
+
+  button {
+    @include reset-button;
+    display: flex;
+    height: 32px;
+    width: 32px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  svg {
+    height: auto;
+    width: 22px;
+    fill: var(--color-light);
+    stroke: var(--color-dark);
+  }
+}
 
 /* end header */

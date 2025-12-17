@@ -5,6 +5,7 @@
   --color-light: #FFFFFF;
   --color-dark: #2B2B2B;
   --color-orange: #E89F38;
+  --font-size: 16px;
 }
 
 *,
@@ -45,11 +46,10 @@ body {
   padding: 0;
   flex-direction: column;
   font-family: 'Inter', sans-serif;
-  font-size: 16px;
-  line-height: 1.4;
-  font-weight: 400;
-  background-color: var(--color-light);
+  font-weight: var(--font-size);
+  line-height: 1;
   color: var(--color-dark);
+  background-color: var(--color-light);
   overflow-x: hidden;
 
   &::-webkit-scrollbar {
@@ -88,10 +88,6 @@ footer {
   flex-grow: 0;
   flex-shrink: 0;
   flex-basis: auto;
-}
-
-a {
-  text-decoration: none;
 }
 
 img {
