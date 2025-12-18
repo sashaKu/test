@@ -9,6 +9,7 @@
   justify-content: flex-start;
   align-items: flex-start;
   column-gap: 16px;
+  position: sticky;
 
   form {
     flex-grow: 1;
@@ -59,6 +60,7 @@
 
 .sort__value {
   display: inline-block;
+  padding-top: 4px;
   font-size: var(--font-size-sm);
 }
 

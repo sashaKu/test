@@ -4,6 +4,10 @@
 .header {
   padding: 20px 0;
   background-color: var(--color-light);
+
+  @media(max-width: $mobile-width) {
+    padding: 10px 0;
+  }
 }
 
 .header__wrapper {
@@ -12,6 +16,10 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+
+  @media(max-width: $mobile-width) {
+    grid-template-columns: 230px 1fr;
+  }
 }
 
 .header__logo {
@@ -29,6 +37,11 @@
   img {
     height: auto;
     width: 110px;
+
+    @media(max-width: $md-width) {
+      height: 50px;
+      width: auto;
+    }
   }
 }
 
@@ -40,7 +53,15 @@
   align-items: center;
   flex-wrap: wrap;
   flex-grow: 1;
-  column-gap: 16px;
+  column-gap: 40px;
+
+  @media(max-width: $lg-width) {
+    column-gap: 16px;
+  }
+
+  @media(max-width: $mobile-width) {
+    display: none;
+  }
 
   a {
     display: inline-flex;
@@ -50,12 +71,16 @@
     align-items: center;
     column-gap: 10px;
     flex-wrap: nowrap;
-    font-size: var(--font-size--xl);
+    font-size: var(--font-size-xl);
     line-height: 1;
     color: var(--color-dark);
     text-decoration: none;
     text-transform: uppercase;
     transition: color 0.2s ease-out;
+
+    @media(max-width: $lg-width) {
+      font-size: var(--font-size-lg);
+    }
   }
 
   a:hover {
@@ -84,17 +109,26 @@
     height: 16px;
     width: 16px;
     object-fit: contain;
+
+    @media(max-width: $md-width) {
+      display: none;
+    }
   }
 }
 
 .header__list {
   @include reset-list;
+  justify-self: end;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
-  column-gap: 16px;
+  column-gap: 24px;
+
+  @media(max-width: $lg-width) {
+    column-gap: 16px;
+  }
 
   a {
     display: flex;

@@ -1,4 +1,4 @@
-@use "mixins" as *;
+@use "index" as *;
 /* product-list */
 
 .product-list {
@@ -10,6 +10,10 @@
     grid-template-columns: repeat(3, 1fr);
     column-gap: 15px;
     row-gap: 38px;
+
+    @media(max-width: $md-width) {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 }
 

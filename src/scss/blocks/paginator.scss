@@ -1,4 +1,4 @@
-@use "mixins" as *;
+@use "index" as *;
 /* paginator */
 
 .paginator {
@@ -7,7 +7,8 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
-  column-gap: 16px
+  flex-wrap: wrap;
+  gap: 16px
 }
 
 .paginator__list {
@@ -60,6 +61,28 @@
   }
 }
 
+.paginator__prev {
+  padding: 2px;
+
+  span:first-child {
+
+    @media(max-width: $md-width) {
+      display: none;
+    }
+  }
+}
+
+.paginator__next {
+  padding: 2px;
+
+  span:last-child {
+
+    @media(max-width: $md-width) {
+      display: none;
+    }
+  }
+}
+
 .paginator__prev svg {
   transform: rotate(180deg);
 }
@@ -74,6 +97,13 @@
   background-color: var(--color-light);
   text-decoration: none;
   transition: all 0.2s ease-out;
+
+  @media(max-width: $md-width) {
+    width: 100%;
+    text-align: center;
+    color: var(--color-light);
+    background-color: var(--color-dark);
+  }
 
   &:hover {
     color: var(--color-light);
