@@ -1,3 +1,13 @@
+@use "mixins" as *;
 /* footer */
+
+.footer__wrapper {
+  display: grid;
+  grid-template-columns: 230px 1fr;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border-top: 1px solid var(--color-dark);
+}
 
 /* end footer */

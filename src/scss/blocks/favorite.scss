@@ -1,0 +1,66 @@
+/* favorite */
+
+.favorite {
+  display: flex;
+  height: 31px;
+  width: 31px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+
+  input {
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+
+  label {
+    display: flex;
+    height: 31px;
+    width: 31px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  svg {
+    height: auto;
+    width: 18px;
+    fill: none;
+    stroke: var(--color-dark);
+    stroke-width: 1.5px;
+    transition: all 0.2s ease-out;
+    position: relative;
+  }
+
+  &::before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-color: var(--color-light);
+    opacity: 0.8;
+    transition: opacity 0.2s ease-out;
+    position: absolute;
+    inset: 0;
+  }
+}
+
+.favorite:hover {
+
+  &::before {
+    opacity: 1;
+  }
+}
+
+.favorite input:checked + svg {
+  fill: var(--color-dark);
+}
+
+/* end favorite */

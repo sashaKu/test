@@ -1,4 +1,9 @@
+@use "mixins" as *;
 /* inner-page */
+
+.inner-page {
+  padding-bottom: 80px;
+}
 
 .inner-page__grid {
   display: grid;
@@ -18,5 +23,16 @@
   grid-area: sidebar;
 }
 
+.inner-page__wysiwyg {
+  @include reset-list;
+
+  > li {
+    margin-bottom: 40px;
+  }
+
+  > li:last-child {
+    margin-bottom: 0;
+  }
+}
 
 /* end inner-page */

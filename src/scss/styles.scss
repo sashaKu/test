@@ -12,5 +12,9 @@
 @use "blocks/title";
 @use "blocks/wysiwyg";
 @use "blocks/sort";
+@use "blocks/product-list";
+@use "blocks/favorite";
+@use "blocks/slider";
+@use "blocks/paginator";
 
 @use "pages/page-filter";

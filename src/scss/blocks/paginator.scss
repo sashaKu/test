@@ -1,0 +1,84 @@
+@use "mixins" as *;
+/* paginator */
+
+.paginator {
+  display: flex;
+  margin-bottom: 60px;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  column-gap: 16px
+}
+
+.paginator__list {
+  @include reset-list;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  column-gap: 10px;
+}
+
+.paginator__item {
+  display: inline-flex;
+  min-height: 34px;
+  min-width: 34px;
+  padding: 2px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  column-gap: 7px;
+  font-size: var(--font-size-md);
+  color: var(--color-dark);
+  border: 1px solid var(--color-dark);
+  background-color: var(--color-light);
+  text-decoration: none;
+  transition: all 0.2s ease-out;
+
+  &:hover {
+    color: var(--color-light);
+    background-color: var(--color-dark);
+
+    svg {
+      stroke: var(--color-light);
+    }
+  }
+}
+
+.paginator__next,
+.paginator__prev {
+  padding-left: 17px;
+  padding-right: 17px;
+
+  svg {
+    height: auto;
+    width: 15px;
+    fill: none;
+    stroke: var(--color-dark);
+    transition: stroke 0.2s ease-out;
+  }
+}
+
+.paginator__prev svg {
+  transform: rotate(180deg);
+}
+
+.paginator__more {
+  display: inline-block;
+  min-height: 34px;
+  padding: 8px 14px;
+  font-size: var(--font-size-md);
+  color: var(--color-dark);
+  border: 1px solid var(--color-dark);
+  background-color: var(--color-light);
+  text-decoration: none;
+  transition: all 0.2s ease-out;
+
+  &:hover {
+    color: var(--color-light);
+    background-color: var(--color-dark);
+  }
+}
+
+/* end paginator */
