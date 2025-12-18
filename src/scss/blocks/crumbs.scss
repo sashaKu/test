@@ -1,0 +1,58 @@
+@use "mixins" as *;
+
+/* crumbs */
+
+.crumbs__list {
+  @include reset-list;
+  display: inline-flex;
+  margin-bottom: 11px;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  column-gap: 8px;
+
+  li {
+    position: relative;
+  }
+
+  li:last-child:after  {
+    display: none;
+  }
+
+  li:after {
+    content: "/";
+    height: 100%;
+    width: 4px;
+    padding-left: 2px;
+    font-size: var(--font-size-sm);
+    color: var(--color-grey);
+    position: relative;
+  }
+
+  a,
+  span {
+    display: inline-block;
+    text-decoration: none;
+    font-size: var(--font-size-sm);
+    color: var(--color-dark);
+    transition: color 0.2s ease-out;
+    position: relative;
+  }
+
+  a:hover {
+    color: var(--color-orange);
+  }
+
+  a::after {
+    content: "";
+    height: 1px;
+    width: 100%;
+    background-color: var(--color-orange);
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+  }
+}
+
+/* end crumbs */

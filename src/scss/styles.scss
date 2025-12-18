@@ -8,5 +8,9 @@
 @use "blocks/inner-page";
 @use "blocks/filter";
 @use "blocks/checkbox";
+@use "blocks/crumbs";
+@use "blocks/title";
+@use "blocks/wysiwyg";
+@use "blocks/sort";
 
 @use "pages/page-filter";

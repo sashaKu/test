@@ -1,0 +1,29 @@
+/* title */
+
+.title {
+  margin-bottom: 20px;
+}
+
+.title__main {
+  display: flex;
+  margin-bottom: 16px;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  column-gap: 16px;
+
+  h1 {
+    flex-grow: 1;
+    margin: 0;
+    font-size: var(--font-size-title);
+    font-weight: 700;
+  }
+
+  img {
+    height: auto;
+    width: 32px;
+    object-fit: contain;
+  }
+}
+
+/* end title */

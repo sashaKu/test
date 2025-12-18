@@ -1,0 +1,20 @@
+@use "mixins" as *;
+
+/* wysiwyg */
+
+.wysiwyg {
+
+  p {
+    margin: 0;
+    margin-bottom: 16px;
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--color-dark);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+/* end wysiwyg */
