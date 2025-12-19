@@ -1,4 +1,4 @@
-@use "mixins" as *;
+@use "index" as *;
 /* inner-page */
 
 .inner-page {
@@ -13,6 +13,10 @@
   &--sidebar {
     grid-template-columns: 230px 1fr;
     grid-template-areas: "sidebar main";
+
+    @media(max-width: $md-width) {
+      grid-template-columns: 1fr;
+    }
   }
 }
 
@@ -22,6 +26,10 @@
 
 .inner-page__filter {
   grid-area: sidebar;
+
+  @media(max-width: $md-width) {
+    display: none;
+  }
 }
 
 .inner-page__wysiwyg {

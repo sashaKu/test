@@ -1,3 +1,4 @@
+@use "var" as *;
 /* title */
 
 .title {
@@ -17,6 +18,10 @@
     margin: 0;
     font-size: var(--font-size-title);
     font-weight: 700;
+
+    @media(max-width: $md-width) {
+      font-size: 32px;
+    }
   }
 
   img {
@@ -24,6 +29,10 @@
     height: auto;
     width: 32px;
     object-fit: contain;
+
+    @media(max-width: $md-width) {
+      display: none;
+    }
   }
 }
 
